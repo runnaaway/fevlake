@@ -1,0 +1,66 @@
+.main-about {
+    padding: 80px 0 85px;
+    color: #1b2331;
+    
+    .container {
+        box-sizing: border-box;
+        padding: 50px 300px 50px 110px;
+        background: url(../../../img/main_about.png) right center no-repeat, linear-gradient(180deg, #deeaf4 0%, #ffffff 100%);
+        box-shadow: 0 50px 100px rgba(2, 54, 97, 0.2);
+        border-radius: 10px;
+    }
+
+    p:not([class]) {
+        margin: 0 0 30px;
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    &__specialists {
+        &-title {
+            margin: 0 0 30px;
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: 500;
+            color: #1b2331;
+        }
+
+        &-list {
+            display: flex;
+            align-items: center;
+            margin: -20px;
+        }
+
+        &-entry {
+            margin: 20px;
+            text-align: center;
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: 700;
+            color: #1b2331;
+
+            &__img {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100px;
+                height: 100px;
+                margin: 0 0 15px;
+                background: #ffffff;
+                box-shadow: 0 4px 4px #c3d3e0;
+                border-radius: 10px;
+
+                img {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__yandex {
+        position: absolute;
+        right: 110px;
+        bottom: 50px;
+        width: 250px;
+    }
+}

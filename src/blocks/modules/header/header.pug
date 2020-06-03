@@ -1,0 +1,42 @@
+-
+    var menu = [{
+        name: 'Направления',
+        list1: ['DevOps', 'Clickhouse', 'Yandex Cloud', 'Kubernetes', 'Администрирование Linux'],
+        list2: ['Mysql', 'Google Cloud', 'Docker Swarm', 'Education'],
+    }, {
+        name: 'Кейсы',
+    }, {
+        name: 'О нас',
+    }, {
+        name: 'Контакты',
+    }, ]
+.header-container
+    header.header
+        .container
+            a.header__logo(href='/')
+            a.header__open.js-header-toggle(href='#')
+            .header__wrap
+                ul.header__menu
+                    each entry in menu
+                        li.menu__entry
+                            a.menu__lnk(href='#')=entry.name
+                            - if (entry.list1 && entry.list2)
+                                .header__submenu
+                                    .submenu__inner
+                                        ul.submenu__list
+                                            each child in entry.list1
+                                                li.submenu__entry
+                                                    a.submenu__lnk(href='#')=child
+                                        ul.submenu__list
+                                            each child in entry.list2
+                                                li.submenu__entry
+                                                    a.submenu__lnk(href='#')=child
+            .header__lang
+                a.lang__title(href='#') Ru
+                .lang__dropdown
+                    ul.lang__list
+                        each entry in ['Ru', 'En']
+                            li.lang__entry
+                                a.lang__lnk(href='#')=entry
+
+            button.btn.btn_green Оставить заявку

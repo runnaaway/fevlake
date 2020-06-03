@@ -1,0 +1,74 @@
+include ../../_mixins/review
+-
+    const reviews = [{
+        name: 'James Ahearne',
+        position: 'CEO, GoSay',
+        logo: '01',
+        text: 'Команда Fevlake оказалась самой отзывчивой, они смогли обсудить задачи не на техническом языке, а доступно объяснять всей команде заказчика...'
+    }, {
+        name: 'Кирилл Мухин',
+        position: 'ГлавДоставка',
+        logo: '02',
+        text: 'С Fevlake начали работать по рекомендации. С командой работать нравится, чаще, конечно, обращения приходят от нашего отдела разработки...'
+    }, {
+        name: 'Михаил Сахаров',
+        position: 'windy.app',
+        logo: '03',
+        text: 'В Fevlake пришли по рекомендации коллег, которые обслуживали наш проект. По работе все нравится, ребята мониторят сбои, терпят и обрабатывают все...'
+    }, {
+        name: 'Дмитрий Ушков',
+        position: 'CTO, INMYROOM',
+        logo: '04',
+        text: 'С Fevlake мы работаем очень давно, в нашем случае держать своего фулл-тайм девопса не очень целесообразно, а формат аутсорса очень удобен...'
+    }, {
+        name: 'Дмитрий Журавленко',
+        position: 'CTO, Gemini (ФСК Лидер)',
+        logo: '05',
+        text: 'Сменили штатного DevOps инженера на Fevlake, ни разу не пожалели, потому что: <br>• выгодно — для организации непрерывной поддержки в штате...'
+    }, {
+        name: 'Павел Шаповалов',
+        position: 'CTO, Chatex',
+        logo: '06',
+        text: 'Мы занимаемся разработкой Chatex - приложения, которое позволяет совершать переводы, хранить и обменивать криптовалюту самым...'
+    }, {
+        name: 'Илья Дроздов',
+        position: 'CEO, Finery',
+        logo: '07',
+        text: 'When we were looking for a DevOps engineer, one of our developers recommended working with FevLake as an alternative. It was 2 years ago...'
+    }, {
+        name: 'Алексей Наймушин',
+        position: 'Генеральный Директор Otken Digital',
+        text: 'С компанией Fevlake мы работаем по нескольким проектам. <br>Первый из них длится уже более 2-х лет. В течение этого времени Fevlake отвечает...'
+    }, {
+        name: 'Алексей Литвинов',
+        position: 'CTO, КупиКупон',
+        logo: '08',
+        text: 'Мы одна из первых компаний, которая появилась на обслуживании у команды Fevlake. Мы сотрудничаем с 2013 года. <br>За все время работы команда проявила...'
+    }, {
+        name: 'Anton Galchenko',
+        position: 'CTO, Xena Exchange',
+        logo: '09',
+        text: 'Когда начинали работу с Fevlake, была очень важна скорость, мы оказались в ситуации, когда нужно было очень быстро развернуть инфраструктуру, потому...'
+    }, {
+        name: 'Сергей Смолин',
+        position: 'СТО, Ambiz',
+        logo: '10',
+        text: 'Мы обратились в Fevlake по рекомендации, ни на секунду не сомневались в компетенции ребят, так и получается по сей день...'
+    },  {
+        name: 'Расул Сидаметов',
+        position: 'BKC',
+        logo: '11',
+        text: 'Работаем с Fevlake чуть меньше года, пришли по рекомендации. <br>О выборе не жалеем, специалисты в команде профессиональные...'
+    },  {
+        name: 'Dmitry Shkolnikov',
+        position: 'Airpush',
+        logo: '12',
+        text: 'Vasily took all dev-ops and infrastructure from the very beginning and participated tightly in company growth. He took major part in building modern ...'
+    }, ]
+.reviews
+    .reviews__title Отзывы
+    .reviews__list
+        each entry in reviews
+            +reviewsEntry(entry.name, entry.position, entry.logo, entry.text)
+    .btn-container
+        a.btn.btn_green(href='reviews.html') Все отзывы

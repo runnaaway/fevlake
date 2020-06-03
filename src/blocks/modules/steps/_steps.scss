@@ -1,0 +1,123 @@
+.steps {
+    color: #1b2331;
+    padding: 120px 0 140px;
+
+    &__head {
+        display: flex;
+        align-items: flex-end;
+        margin: 0 0 110px;
+
+        .head__left {
+            width: 48%;
+            font-size: 20px;
+            line-height: 32px;
+        }
+
+        .head__right {
+            width: 45%;
+            margin-left: auto;
+        }
+    }
+
+    &__title {
+        margin: 0 0 50px;
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 51px;
+        color: #1b2331;
+    }
+
+    &__features {
+        .features__entry {
+            position: relative;
+            margin: 30px 0 0;
+            padding: 0 0 0 64px;
+            font-size: 16px;
+            line-height: 24px;
+
+            &:first-child {
+                margin: 0;
+            }
+            
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 40px;
+                height: 40px;
+                background: url(../../../img/svg/check_purple_40x40.svg) no-repeat;
+                background-size: contain;
+            }
+
+            span {
+                margin: 0 0 10px;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 22px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                color: #1b2331;
+            }
+        }
+    }
+
+    &__list {
+        background: url(../../../img/svg/steps_bg.svg) center 50px no-repeat;
+    }
+
+    &__entry {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        width: 40%;
+        margin: 0 0 30px;
+        padding: 30px 15px 30px 25px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #1b2331;
+        background: #ffffff;
+        box-shadow: 0 20px 40px rgba(2, 54, 97, 0.2);
+        border-radius: 4px;
+
+        &:nth-child(even) {
+            margin-left: auto;
+        }
+
+        &:nth-child(3) {
+            .entry__icon {
+                &:after {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 25px;
+                    height: 25px;
+                    background: url(../../../img/svg/tg_25x25.svg) no-repeat;
+                }
+            }
+        }
+
+        .entry__icon {
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 64px;
+            height: 64px;
+            margin: 0 25px 0 0;
+            background: #deeaf4;
+            border-radius: 10px;
+        }
+
+        .entry__title {
+            margin: 0 0 10px;
+            font-weight: 600;
+
+            &:only-child {
+                margin: 0;
+            }
+        }
+    }
+}

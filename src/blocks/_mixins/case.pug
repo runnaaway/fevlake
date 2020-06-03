@@ -1,0 +1,14 @@
+mixin casesEntry(color, title, taskText)
+    .cases__entry(class='cases__entry_' + color)
+        a.entry__lnk(href='case.html')
+        .entry__stack
+            img(src='/img/svg/stack_docker.svg' alt='')
+            img(src='/img/svg/stack_gitlab.svg' alt='')
+            img(src='/img/svg/stack_kuber.svg' alt='')
+        .entry__body
+            .entry__title!=title
+            .entry__task!=taskText
+        .entry__tags
+            a.tag__lnk(href='#') Kuber
+            a.tag__lnk(href='#') Docker
+            a.tag__lnk(href='#') Highload

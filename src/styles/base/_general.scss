@@ -1,0 +1,32 @@
+body {
+    font-family: $ffbase;
+}
+
+//fix: footer to bottom of the page
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.footer {
+    margin-top: auto;
+}
+//end fix
+
+.container {
+    position: relative;
+    width: 100%;
+    min-width: 300px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 0;
+}

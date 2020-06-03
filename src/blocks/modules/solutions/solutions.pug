@@ -1,0 +1,37 @@
+.solutions
+    .container
+        .solutions__title Решения для ваших задач
+        .solutions__steps
+            .steps__title Начало работы с Fevlake
+            .steps__list
+                each entry in ['Подписывем NDA', 'Бриф по вашим задачам <br>и целям', 'Подготовка Road Map проекта. Просчет стоимости инфраструктуры / работ', 'Презентация Road Map проекта. Коммерческое предложение']
+                    .steps__entry!=entry
+        .solutions__entry.solutions__entry_start
+            .entry__left
+                .entry__title Старт с Fevlake
+                .entry__text У вас новый проект, или вы стартап и вам необходимо спроектировать и обслуживать IT инфраструктуру с перспективой быстрого масштабирования.
+            .entry__btns
+                button.btn.btn_md.btn_green Подать заявку на аудит
+        .solutions__entry.solutions__entry_scale
+            .entry__left
+                .entry__title Масштабирование <br>Оптимизация <br>Снижение затрат с Fevlake
+                .entry__text
+                    p У вас есть проект на любой стадии развития и вам:
+                    ul
+                        li Старые решения не позволяют расти
+                        li В ближайшее время вы планируете сильно увеличиться и надо быть уверенным в инфраструктуре
+            .entry__btns
+                button.btn.btn_md.btn_green Подать заявку на аудит
+        .solutions__entry.solutions__entry_staff
+            .entry__left
+                img(src='' alt='')
+                .entry__title Нужно развить команду <br>Нанять DevOps инженера
+                .entry__text
+                    p Вопросы, которые можем решить:
+                    ul
+                        li Аудит компетенций вашего коллектива
+                        li Требуется повысить квалификацию сотрудников
+                        li Нужно нанять в штат инженера
+            .entry__btns
+                button.btn.btn_green Подать заявку на аудит
+                button.btn.btn_grey Запросить готовых DevOps

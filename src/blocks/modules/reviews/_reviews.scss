@@ -1,0 +1,99 @@
+.reviews {
+    padding: 80px 0 50px;
+    background: linear-gradient(to bottom, #dfebf4, #fff);
+
+    .btn-container {
+        margin: 0;
+    }
+
+    .slick-list {
+        padding: 0 0 50px;
+    }
+
+    .slick-track {
+        display: flex;
+    }
+	
+    &__title {
+        position: relative;
+        margin: 0 0 50px;
+        padding: 55px 0 0;
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 51px;
+        text-align: center;
+        color: #1b2331;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            width: 76px;
+            height: 36px;
+            margin: auto;
+            background: url(../../../img/svg/reviews.svg) no-repeat;
+        }
+    }
+
+    &__entry {
+        display: flex !important;
+        flex-direction: column;
+        height: auto !important;
+        margin: 12px;
+        padding: 30px 20px;
+        float: none;
+        background: #ffffff;
+        box-shadow: 0 20px 40px rgba(2, 54, 97, 0.2);
+        border-radius: 4px;
+
+        .entry__head {
+            display: flex;
+            align-items: center;
+            margin: 0 0 15px;
+        }
+
+        .entry__logo {
+            display: block;
+            margin-left: auto;
+        }
+
+        .entry__name {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            color: #1b2331;
+        }
+
+        .entry__position {
+            font-weight: 100;
+            letter-spacing: 0.5px;
+            font-size: 14px;
+            line-height: 24px;
+            color: #7c8ca4;
+            font-style: italic;
+        }
+
+        .entry__text {
+            margin: 0 0 30px;
+            font-size: 16px;
+            line-height: 24px;
+            color: #1b2331;
+        }
+
+        .entry__more {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            color: $colorgreen;
+
+            &:hover {
+                color: $colorgreen_hover;
+            }
+        }
+    }
+}

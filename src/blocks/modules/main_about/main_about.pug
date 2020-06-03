@@ -1,0 +1,12 @@
+.main-about
+    .container
+        p Мы помогаем справиться с быстрым ростом, или оптимизировать текующую инфраструктуру и сконцентрироваться на продукте.
+        p Аутсорсинг инфраструктуры с Fevlake - это выгодное решение. <br>С нами вы уйдете от сложного и неэффективного IT окружения, либо мы спроектируем инфраструкутуру с возможностью масштабирования с полного нуля.
+        p.main-about__specialists-title В команде сертифицированные специалисты:
+        ul.main-about__specialists-list
+            each entry in [['docker', 'Docker'], ['kuber', 'Kubernetes'], ['ccna', 'CCNA']]
+                li.main-about__specialists-entry
+                    .main-about__specialists-entry__img
+                        img(src='/img/svg/logo_' + entry[0] + '.svg' alt='')
+                    span=entry[1]
+        img.main-about__yandex(src='/img/svg/yandex.svg' alt='')

@@ -1,0 +1,54 @@
+.btn {
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid;
+    padding: 10px 27px 10px;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 200ms linear;
+    color: #ffffff;
+
+    &_lg {
+        padding: 30px 55px;
+    }
+
+    &_md {
+        padding: 17px 28px;
+    }
+
+    &_green {
+        border-color: $colorgreen;
+        background: $colorgreen;
+        color: #ffffff;
+
+        &:hover {
+            border-color: $colorgreen_hover;
+            background: $colorgreen_hover;
+        }
+    }
+
+    &_navy {
+        border-color: $colornavy;
+        background: $colornavy;
+        color: #ffffff;
+
+        &:hover {
+            border-color: $colornavy_hover;
+            background: $colornavy_hover;
+        }
+    }
+
+    &_grey {
+        border-color: $colordarkgrey;
+        background: $colordarkgrey;
+        color: #ffffff;
+
+        &:hover {
+            border-color: $colordarkgrey_hover;
+            background: $colordarkgrey_hover;
+        }
+    }
+}

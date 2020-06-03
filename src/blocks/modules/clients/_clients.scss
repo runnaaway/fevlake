@@ -1,0 +1,25 @@
+.clients {
+    padding: 60px 0;
+    border-bottom: 1px solid #e3e6e9;
+
+    &__title {
+        margin: 0 0 30px;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 0.2em;
+        font-weight: 600;
+        color: $colorgrey;
+    }
+
+    &__entry {
+        padding: 10px;
+
+        img {
+            display: block;
+            max-width: 100%;
+            margin: auto;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.why
+    .container
+        .why__left
+            .why__title Почему Fevlake?
+            a.btn.btn_navy(href='#') Посмотреть кейсы
+        .why__right
+            .why__list
+                each entry in [['Сертифицированные инженеры Kubernetes, Docker , CCNA', '01'], ['Одно из самых больших сообществ DevOps в СНГ <br><br>– Мы провели более 70 практикумов по DevOps<br>– Более 12 000 человек пришли к нам на занятия<br>– 10 000+ человек в Telegram - канале', '02'], ['Своя академия для специалистов инфраструктуры <a href="Rebrainme.com" target="_blank">Rebrainme.com</a> <br>Более 700 студентов', '03'], ['Работаем с 2012 года', '04']]
+                    .why__entry
+                        .entry__icon
+                            img(src='/img/svg/why/' + entry[1] + '.svg' alt='')
+                        p!=entry[0]
+            .why__list
+                each entry in [['Поддержка проектов 24/7', '05'], ['Персональный менеджер для каждого заказчика', '06'], ['SLA Среднее время реакции на Алерты - 5 минут', '07'], ['Не навязывываем решения. Мы не являемся вендор-локом и подбираем самые эффективные решения для вашего проекта', '08']]
+                    .why__entry
+                        .entry__icon
+                            img(src='/img/svg/why/' + entry[1] + '.svg' alt='')
+                        p!=entry[0]

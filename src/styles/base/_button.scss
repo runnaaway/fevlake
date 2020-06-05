@@ -51,4 +51,23 @@
             background: $colordarkgrey_hover;
         }
     }
+
+    &-back {
+        display: flex;
+        align-items: center;
+
+        &:before {
+            content: "";
+            width: 22px;
+            height: 20px;
+            margin-right: 15px;
+            background: url(../../img/svg/arr_green_22x20.svg) no-repeat;
+        }
+
+        &:hover {
+            &:before {
+                background: url(../../img/svg/arr_green_22x20_hover.svg) no-repeat;
+            }
+        }
+    }
 }

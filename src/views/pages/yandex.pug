@@ -1,0 +1,79 @@
+extends ../layouts/default
+include ../../blocks/modules/tags/tags
+block variables
+	- const title = "Yandex Cloud";
+block content
+	.service
+		.service__head
+			.container
+				.head__left
+					.service__title
+						small Официальный партнер Yandex
+						| Yandex Cloud
+					.service__term *Работаем с 2012 года
+					ul
+						li Полная настройка и поддержка инфраструктуры в Яндекс Облаке
+						li Помогаем с миграцией и сервисами
+					button.btn.btn_lg.btn_green.js-modal-open(data-modal='modal-request') Оставить заявку на аудит
+					img(src='/img/svg/yandex.svg' alt='')
+				.head__techs
+					.techs__img
+						img(src='/img/svg/techs/yandex.svg' alt='')
+					.techs__dots
+						each entry in ['ansible', 'clickhouse', 'cloudcdn', 'computecloud', 'computeengine', 'docker', 'gitlab', 'go', 'haproxy', 'helm']
+							.dots__entry
+								img(src='/img/svg/techs/' + entry + '.svg' alt='')
+				+tags('green', ['Поддержка 24/7', 'Мониторим 24/7 ', 'SLA 5 min'])
+				+tags('green', ['Настраиваем CI/CD', 'Мониторим 24/7', 'SLA 5 min'])
+		include ../../blocks/modules/clients/clients
+		.service__features
+			.container
+				.service__title Услуги
+				.features__text
+					p За последние несколько лет Яндекс.Облако заметно расширилось и предлагает пользователям огромный список сервисов, которые можно использовать для повышения отказоустойчивости вашего приложения.
+					p Яндекс.Облако поддерживает 152-ФЗ, что означает, что вы можете хранить и обрабатывать данные своих пользователей в облаке.
+					p Мы, явялемся партнерами Яндекс.Облака и готовы проконсультировать по всем сервисам облака, рассчитать стоимость и помочь с переездом вашей инфраструктуры.
+				.features__list
+					each entry, index in [['Масштабирование', 'Настраиваем группы виртуальных машин с автоматическим масштабированием', 'scale'], ['Security', 'Настраиваем безопасный доступ к вашим ресурсам, используя сервисные аккаунты', 'security'], ['CI/CD', 'Настраиваем деплой ваших приложений через gitlab ci и yandex cli', 'cicd'], ['Managed*', 'Используем облачные SQL/NoSQL решения для повышения отказоустойчивости вашей инфраструктуры', 'managed'], ['Monitoring 24/7', 'Сохраняем логи и метрики в stackdriver и настраиваем алерты', 'monitoring']]
+						.features__entry
+							.entry__icon
+								img(src='/img/svg/features/' + entry[2] + '.svg' alt='')
+							.entry__title=entry[0]
+							p=entry[1]
+				.features__disclaimer Мы не замыкаем процессы на себе - все инструменты, которые мы используем будут доступны всей команде. <br>От руководства до администраторов. Все смогут следить за тем, что происходит в проекте.
+		.service__stack
+			.container
+				.stack__wrap
+					.service__title Технологический стек
+					.stack__list
+						each entry in [['Compute Cloud', 'Поднимаем виртуалки с помощью terraform', 'terraform'], ['Instance Group', 'Настраиваем автоматическое масштабировние группы при увеличении нагрузки', 'instance'], ['Managed Postgresql', 'Разворачиваем облачную базу для ваших данных', 'postgres'], ['Load Balancer', 'Подключаем балансировщик нагрузки, чтобы ваши ресурсы всегда были доступны', 'balancer'], ['Container Registry', 'Используем облачное решение для хранение образов контейнеров', 'container'], ['Managed Clickhouse', 'Запускаем облачный кластер clickhouse и подключаем datalens для аналитики', 'clickhouse'], ['GKE', 'Разворачиваем kubernetes в облаке с RBAC', 'gke'], ['Message Queue', 'Используем облачное решение для обработки сообщений', 'queue'], ['Serverless', 'Пишем облачные функции для обработки запросов', 'serverless']]
+							.stack__entry
+								.entry__icon
+									img(src='/img/svg/stack/' + entry[2] + '.svg' alt='')
+								.entry__title=entry[0]
+								.entry__text=entry[1]
+		include ../../blocks/modules/cases/cases
+		include ../../blocks/modules/reviews/reviews
+		.service__training
+			.container
+				.training__left
+					.training__subtitle Обучение с Fevlake
+					.training__title Мы создали одно из самых крупных сообществ специалистов по инфраструктуре в СНГ <br><br>И площадку
+						a(href='https://rebrainme.com') Rebrainme.com
+				.training__right
+					.training__form
+						.form__title Нужно развить команду / Нанять Системного администратора Linux
+						p Вопросы, которые можем решить:
+						ul
+							li Аудит компетенций вашего коллектива
+							li Требуется повысить квалификацию сотрудников
+							li Нужно нанять в штат инженера
+						a.btn.btn_md.btn_green(href='https://rebrainme.com/educorp/' target='_blank') Обучить сотрудников
+						button.btn.btn_md.btn_navy.js-modal-open(data-modal='modal-request') Запросить готовых Linux администраторов
+					.training__hint *Практикум проходят более 1000 человек
+	include ../../blocks/modules/blogs/blogs
+
+
+block scripts
+	script(src="js/yandex.js")
+	script(src="js/vendor.js")

@@ -2,6 +2,10 @@
     padding: 60px 0;
     border-bottom: 1px solid #e3e6e9;
 
+    @media(max-width: 767px) {
+        padding: 30px 0 10px;
+    }
+
     &__title {
         margin: 0 0 30px;
         font-size: 14px;
@@ -20,6 +24,10 @@
             display: block;
             max-width: 100%;
             margin: auto;
+
+            @media(max-width: 767px) {
+                max-width: 80%;
+            }
         }
     }
 }

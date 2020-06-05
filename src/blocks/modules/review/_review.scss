@@ -1,0 +1,38 @@
+#modal-review {
+    .review__logo {
+        display: block;
+        margin: 0 auto 30px;
+    }
+
+    .review__text {
+        font-size: 14px;
+        line-height: 24px;
+
+        p {
+            margin: 0 0 25px;
+        }
+    }
+
+    .review__name {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+    }
+	
+    .review__position {
+        font-size: 14px;
+        line-height: 24px;
+        color: #7c8ca4;
+    }
+
+    .modal__close {
+        display: none;
+
+        @media(max-width: 767px) {
+            display: block;
+            top: -40px;
+            right: 10px;
+            background: url(../../../img/svg/close_white_30x30.svg) no-repeat;
+        }
+    }
+}

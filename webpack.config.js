@@ -14,7 +14,21 @@ module.exports = {
     ],
     
     entry: {
-        main: "./src/js/index.js",
+        main: ["./src/js/index.js", "./src/js/common.js"],
+        case: ["./src/js/common.js"],
+        cases: ["./src/js/common.js"],
+        clickhouse: ["./src/js/import/pages/service.js", "./src/js/common.js"],
+        contacts: ["./src/js/import/pages/contacts.js", "./src/js/common.js"],
+        devops: ["./src/js/import/pages/service.js", "./src/js/common.js"],
+        dirs: ["./src/js/import/pages/dirs.js", "./src/js/common.js"],
+        docker: ["./src/js/import/pages/service.js", "./src/js/common.js"],
+        google: ["./src/js/import/pages/service.js", "./src/js/common.js"],
+        kubernetes: ["./src/js/import/pages/service.js", "./src/js/common.js"],
+        linux: ["./src/js/import/pages/service.js", "./src/js/common.js"],
+        mysql: ["./src/js/import/pages/service.js", "./src/js/common.js"],
+        yandex: ["./src/js/import/pages/service.js", "./src/js/common.js"],
+        reviews: ["./src/js/import/pages/reviews.js", "./src/js/common.js"],
+
     },
 
     output: {

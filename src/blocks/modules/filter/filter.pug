@@ -1,0 +1,8 @@
+mixin filter(title, items)
+    .filter
+        .filter__title=title
+        .filter__list
+            each entry in items
+                label.filter__label.checkbox-custom
+                    input.custom__input(type='checkbox' name='cases' value=entry)
+                    span.custom__title=entry

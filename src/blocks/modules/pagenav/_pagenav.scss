@@ -1,0 +1,27 @@
+.pagenav {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 60px -8px 0;
+
+    &__lnk {
+        width: 40px;
+        height: 40px;
+        margin: 0 8px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #32335c;
+        line-height: 40px;
+        text-align: center;
+        background: #ecf1f6;
+        border-radius: 4px;
+
+        &:hover {
+            background: #cedbe8;
+        }
+
+        &_current {
+            background: #32335c;
+            color: #ffffff;
+        }
+    }
+}

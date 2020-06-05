@@ -1,5 +1,6 @@
 body {
     font-family: $ffbase;
+    color: #1b2331;
 }
 
 //fix: footer to bottom of the page
@@ -17,16 +18,63 @@ body {
 //end fix
 
 .container {
+    box-sizing: border-box;
     position: relative;
     width: 100%;
     min-width: 300px;
-    max-width: 1200px;
+    max-width: 1230px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 15px;
 }
 
 .btn-container {
     display: flex;
     justify-content: center;
     margin: 30px 0 0;
+}
+
+.block_padding {
+    padding-top: 65px;
+    padding-bottom: 65px;
+
+    @media(max-width: 767px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+.colgroup {
+    display: flex;
+
+    @media(max-width: 767px) {
+        flex-direction: column;
+    }
+
+    .col_aside {
+        flex-shrink: 0;
+        width: 230px;
+        margin-right: 20px;
+
+        @media(max-width: 767px) {
+            width: 100%;
+        }
+    }
+
+    .col_body {
+        flex-grow: 1;
+
+        @media(max-width: 767px) {
+            width: 100%;
+        }
+    }
+
+    .col_left {
+        @media(max-width: 767px) {
+            margin: 0 0 20px;
+        }
+    }
+}
+
+.ov-hidden {
+    overflow: hidden;
 }

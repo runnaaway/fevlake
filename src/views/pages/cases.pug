@@ -1,0 +1,65 @@
+extends ../layouts/default
+include ../../blocks/_mixins/case
+block variables
+	- const title = "Кейсы";
+	-
+		const cases = [{
+			color: 'navy',
+			title: 'Настройка gitlab CI для <br>проекта на golang',
+			taskText: 'Задача: Настроить бесшовное обновление демона в докере с помощью ansible & nginx.'
+		}, {
+			color: 'red',
+			title: 'Блокировка спам запросов на nginx + lua',
+			taskText: 'Задача: Необходимо блокировать кривые запросы на API, основываясь на отправленных пользователем данных'
+		}, {
+			color: 'purple',
+			title: 'Написание ansible роли для базовой настройки',
+			taskText: 'Задача: Привести все сервера к единому состоянию и настроить мониторинг'
+		}, {
+			color: 'orange', title: 'Написание ansible роли для базовой настройки',
+			taskText: 'Задача: Привести все сервера к единому состоянию и настроить мониторинг'
+		}, {
+			color: 'green', title: 'Настройка gitlab CI для <br>проекта на golang',
+			taskText: 'Задача: Настроить бесшовное обновление демона в докере с помощью ansible & nginx.'
+		}, {
+			color: 'blue', title: 'Блокировка спам запросов на nginx + lua',
+			taskText: 'Задача: Необходимо блокировать кривые запросы на API, основываясь на отправленных пользователем данных'
+		},{
+			color: 'navy',
+			title: 'Настройка gitlab CI для <br>проекта на golang',
+			taskText: 'Задача: Настроить бесшовное обновление демона в докере с помощью ansible & nginx.'
+		}, {
+			color: 'red',
+			title: 'Блокировка спам запросов на nginx + lua',
+			taskText: 'Задача: Необходимо блокировать кривые запросы на API, основываясь на отправленных пользователем данных'
+		}, {
+			color: 'purple',
+			title: 'Написание ansible роли для базовой настройки',
+			taskText: 'Задача: Привести все сервера к единому состоянию и настроить мониторинг'
+		}, {
+			color: 'orange', title: 'Написание ansible роли для базовой настройки',
+			taskText: 'Задача: Привести все сервера к единому состоянию и настроить мониторинг'
+		}, {
+			color: 'green', title: 'Настройка gitlab CI для <br>проекта на golang',
+			taskText: 'Задача: Настроить бесшовное обновление демона в докере с помощью ansible & nginx.'
+		}, {
+			color: 'blue', title: 'Блокировка спам запросов на nginx + lua',
+			taskText: 'Задача: Необходимо блокировать кривые запросы на API, основываясь на отправленных пользователем данных'
+		},]
+block content
+	include ../../blocks/modules/page_head/page_head
+	+pageHead(title, 'Раздел регулярно пополняется')
+	.container.block_padding.colgroup
+		.col.col_left.col_aside
+			include ../../blocks/modules/filter/filter
+			+filter('Технологии', ['Kubernetes', 'Docker', 'AWS', 'Google Cloud', 'Yandex.Cloud'])
+		.col.col_right.col_body
+			.cases__disclaimer Все кейсы обезличены и взяты отдельные связки, что бы показать суть применения технологий. <br>Мы строго соблюдаем NDA
+			.cases
+				.cases__list
+					each entry in cases
+						+casesEntry(entry.color, entry.title, entry.taskText)
+	include ../../blocks/modules/blogs/blogs
+block scripts
+	//script(src="js/services.js")
+	script(src="js/vendor.js")

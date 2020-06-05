@@ -1,0 +1,23 @@
+.page-head {
+    padding: 40px 0;
+    background: url(../../../img/page_head_bg.png) left center no-repeat, linear-gradient(90deg, #dfebf4 0%, rgba(236, 241, 246, 0) 100%);
+
+    h1 {
+        margin: 0 0 10px;
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 51px;
+        color: #1b2331;
+
+        @media(max-width: 767px) {
+            font-size: 32px;
+            line-height: 40px;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 24px;
+        color: #7c8ca4;
+    }
+}

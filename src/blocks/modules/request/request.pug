@@ -1,0 +1,34 @@
+include ../../_mixins/modal
++modal('modal-request')
+    .modal__logo
+    form.modal__form(action='#' method='post')
+        .modal__title Заявка на бесплатный аудит
+        .modal__subtitle *каждый месяц мы выделяем 2 слота под бесплатные аудиты
+        label.form__label.form__label_lg
+            input.form__input(type='text' name='company'  placeholder='Название компании')
+            span.form__caption Название компании
+        label.form__label.form__label_md
+            input.form__input(type='text' name='name'  placeholder='Имя')
+            span.form__caption Имя
+        label.form__label.form__label_md
+            input.form__input.form__input_phone(type='tel' name='phone'  placeholder='Телефон')
+            span.form__caption Телефон
+        label.form__label.form__label_lg
+            input.form__input(type='email' name='company'  placeholder='Email')
+            span.form__caption Email
+        .form__label.form__label_lg
+            button.btn.btn_md.btn_green(type='submit') Оставить заявку
+        .form__label.form__label_lg
+            .form__hint Нажимая на кнопку, вы соглашаетесь с <a href='#'>политикой конфиденциальности</a>
+    .modal__success
+        .success__inner
+            .modal__title Заявка отправлена!
+            .modal__subtitle Спасибо, мы скоро с вами свяжемся
+            button.btn.btn_md.btn_navy.js-modal-close OK
+    script.
+        //демонстрация!!!
+        document.querySelector('button[type=submit]').onclick = function () {
+            document.querySelector('.modal__form').style.display = 'none';
+            document.querySelector('.modal__success').style.display = 'block';
+            return false;
+        }

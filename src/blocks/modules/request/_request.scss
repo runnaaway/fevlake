@@ -1,0 +1,56 @@
+#modal-request {
+    padding: 0;
+
+    .modal-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        background: url(../../../img/request_left_top.png) left top no-repeat, url(../../../img/request_left_bottom.png) left bottom no-repeat, url(../../../img/request_right.png) right bottom no-repeat, linear-gradient(0deg, #deeaf4 0%, #ffffff 100%), #e3edf6;
+    }
+
+    .modal__logo {
+        width: 134px;
+        height: 40px;
+        margin: 0 auto 50px;
+        background: url(../../../img/svg/logo.svg) no-repeat;
+        background-size: contain;
+    }
+
+    .modal__form {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 470px;
+        margin: 0 -10px;
+    }
+
+    .modal__success {
+        display: none;
+        
+        .success__inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            &:before {
+                content: "";
+                display: block;
+                width: 120px;
+                height: 120px;
+                margin: 0 auto 40px;
+                background: url(../../../img/svg/check_green_120x120.svg) no-repeat;
+                background-size: contain;
+            }
+        }
+
+        .btn {
+            padding-left: 45px;
+            padding-right: 45px;
+        }
+    }
+}

@@ -1,0 +1,76 @@
+extends ../layouts/default
+include ../../blocks/modules/tags/tags
+block variables
+	- const title = "Google Cloud";
+block content
+	.service
+		.service__head
+			.container
+				.head__left
+					.service__title Google Cloud
+					.service__term *Работаем с 2012 года
+					ul
+						li Поддержка вашей инфраструктуры в Google Cloud
+						li Помощь в миграции и работе с сервисами
+					button.btn.btn_lg.btn_green.js-modal-open(data-modal='modal-request') Оставить заявку на аудит
+				.head__techs
+					.techs__img
+						img(src='/img/svg/techs/google.svg' alt='')
+					.techs__dots
+						each entry in ['ansible', 'clickhouse', 'cloudcdn', 'computecloud', 'computeengine', 'docker', 'gitlab', 'go', 'haproxy', 'helm']
+							.dots__entry
+								img(src='/img/svg/techs/' + entry + '.svg' alt='')
+				+tags('green', ['Поддержка 24/7', 'Мониторим 24/7 ', 'SLA 5 min'])
+				+tags('green', ['Настраиваем CI/CD', 'Мониторим 24/7', 'SLA 5 min'])
+		include ../../blocks/modules/clients/clients
+		.service__features
+			.container
+				.service__title Услуги
+				.features__text
+					p GCP предлагает возможность использования самых различных инструментов для вычисления и обработки данных.
+					p Мы же имеем опыт и готовы мигрировать ваши сервисы и приложения в облако от Google, тем самым обеспечив непрерывность работы севисов, безопасность, и что, не маловажно, круглосуточную поддержку.
+					p Облачные операторы предоставляеют много возможностей и мы готовы работать со всеми из них: ваши приложения — наши возмжности!
+				.features__list
+					each entry, index in [['K8S', 'Разворачиваем и настраиваем kubernetes кластер в Google Cloud', 'kubernetes'], ['Security', 'Настраиваем безопасный доступ к вашим ресурсам, используя сервисные аккаунты', 'security'], ['Backups', 'Храним ваши данные и бекапы в Cloud Storage', 'backups'], ['Analytics', 'Используем bigquery для анализа ваших данных', 'analytics'], ['Monitoring 24/7', 'Сохраняем логи и метрики в stackdriver и настраиваем алерты', 'monitoring']]
+						.features__entry
+							.entry__icon
+								img(src='/img/svg/features/' + entry[2] + '.svg' alt='')
+							.entry__title=entry[0]
+							p=entry[1]
+				.features__disclaimer Мы не замыкаем процессы на себе - все инструменты, которые мы используем будут доступны всей команде. <br>От руководства до администраторов. Все смогут следить за тем, что происходит в проекте.
+		.service__stack
+			.container
+				.stack__wrap
+					.service__title Технологический стек
+					.stack__list
+						each entry in [['Compute Cloud', 'Поднимаем виртуалки с помощью terraform', 'terraform'], ['Instance Group', 'Настраиваем автоматическое масштабировние группы при увеличении нагрузки', 'instance'], ['Cloud DNS', 'Используем облачный DNS для управления вашими доменами', 'dns'], ['Load Balancer', 'Подключаем балансировщик нагрузки, чтобы ваши ресурсы всегда были доступны', 'balancer'], ['Container Registry', 'Используем облачное решение для хранение образов контейнеров', 'container'], ['IAM', 'Создаем сервисные аккаунты для безопасной работы приложений', 'iam'], ['GKE', 'Разворачиваем kubernetes в облаке с RBAC', 'gke'], ['Cloud Logging', 'Собираем логи и настраиваем алерты прямо в облаке', 'cloudlogging'], ['Cloud Monitoring', 'Мониторим состояние хостов и проверяем на доступность', 'cloudmonitoring']]
+							.stack__entry
+								.entry__icon
+									img(src='/img/svg/stack/' + entry[2] + '.svg' alt='')
+								.entry__title=entry[0]
+								.entry__text=entry[1]
+		include ../../blocks/modules/cases/cases
+		include ../../blocks/modules/reviews/reviews
+		.service__training
+			.container
+				.training__left
+					.training__subtitle Обучение с Fevlake
+					.training__title Мы создали одно из самых крупных сообществ специалистов по инфраструктуре в СНГ <br><br>И площадку
+						a(href='https://rebrainme.com') Rebrainme.com
+				.training__right
+					.training__form
+						.form__title Нужно развить команду / Нанять Системного администратора Linux
+						p Вопросы, которые можем решить:
+						ul
+							li Аудит компетенций вашего коллектива
+							li Требуется повысить квалификацию сотрудников
+							li Нужно нанять в штат инженера
+						a.btn.btn_md.btn_green(href='https://rebrainme.com/educorp/' target='_blank') Обучить сотрудников
+						button.btn.btn_md.btn_navy.js-modal-open(data-modal='modal-request') Запросить готовых Linux администраторов
+					.training__hint *Практикум проходят более 1000 человек
+	include ../../blocks/modules/blogs/blogs
+
+
+block scripts
+	script(src="js/google.js")
+	script(src="js/vendor.js")

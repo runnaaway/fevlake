@@ -1,0 +1,46 @@
+extends ../layouts/default
+include ../../blocks/_mixins/case
+block variables
+	- const title = "Свяжитесь с нами";
+	-
+		const contacts = [{
+			title: 'Отдел продаж',
+			phone: '+7 499 113 35 51',
+			email: 'info@rebrainme.com'
+		}, {
+			title: 'Отдел по работе <br>с партнерами',
+			email: 'info@rebrainme.com'
+		}, {
+			title: 'Агентство Fevlake',
+			email: 'info@fevlake.com'
+		}, {
+			title: 'Техническая поддержка Личного кабинета',
+			email: 'lk@support.rebrainme.com'
+		}, ]
+block content
+	.contacts
+		.container.block_padding
+			h1.contacts__title=title
+			.contacts__list
+				each entry in contacts
+					.contacts__entry
+						.entry__title!=entry.title
+						- if (entry.phone)
+							.entry__caption Телефон
+							a(href='tel:' + entry.phone)=entry.phone
+						.entry__caption E-mail:
+						a(href='mailto:' + entry.email)=entry.email
+		.contacts__bottom
+			.contacts__address
+				.address__cell
+					.contacts__title Наш адрес
+					p ООО Ребреин ИНН/КПП: 7727409582/772701001 ОГРН: 1197746106161 <br>Фактический адрес: 125047, Москва, Тверской-Ямской 1-й пер., д. 11, оф. 2 <br>Схема проезда
+					p Юридический адрес: 125047, Москва, Тверской-Ямской 1-й пер., д. 11, оф. 2
+			.contacts__map
+				#map
+
+	include ../../blocks/modules/blogs/blogs
+block scripts
+	script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+	script(src="js/contacts.js")
+	script(src="js/vendor.js")

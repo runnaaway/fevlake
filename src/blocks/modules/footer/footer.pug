@@ -1,0 +1,40 @@
+footer.footer
+    .container
+        .footer__top
+            .footer__left
+                a.footer__logo(href='/')
+                a.footer__mail(href='mailto:info@rebrainme.com') info@rebrainme.com
+                a.footer__phone(href='tel:+74959759842') +7 495 975 98 42
+                .footer__social
+                    a.social__lnk.social__lnk_tg(href='#' target='_blank')
+                    a.social__lnk.social__lnk_fb(href='#' target='_blank')
+                    a.social__lnk.social__lnk_mail(href='mailto:info@rebrainme.com' target='_blank')
+                .footer__lang
+                    a.lang__lnk.lang__lnk_current(href='#') Ru
+                    a.lang__lnk(href='#') En
+            .footer__menu
+                ul.menu__list
+                    li.menu__entry.menu__entry_title
+                        a.menu__lnk(href='about.html') Компания
+                    each entry, index in [['Направления', 'dirs.html'], ['Кейсы', 'cases.html'], ['О нас', 'about.html'], ['Отзывы', 'reviews.html'], ['Контакты', 'contacts.html']]
+                        li.menu__entry(class={menu__entry_current: !index})
+                            a.menu__lnk(href=entry[1])=entry[0]
+                ul.menu__list
+                    li.menu__entry.menu__entry_title
+                        a.menu__lnk(href='#') Направления
+                    each entry, index in [['DevOps', 'devops.html'], ['Clickhouse', 'clickhouse.html'], ['Yandex Cloud', 'yandex.html'], ['Kubernetes', 'kubernetes.html'], ['Администрирование Linux', 'linux.html'], ['Mysql', 'mysql.html'], ['Google Cloud', 'google.html'], ['Docker Swarm', 'docker.html'], ['Education', 'google.html']]
+                        li.menu__entry(class={menu__entry_current: !index})
+                            a.menu__lnk(href=entry[1])=entry[0]
+        .footer__bottom
+            .footer__legacy
+                .legacy__list
+                    a.legacy__lnk(href='#') Политика конфиденциальности
+                    a.legacy__lnk(href='#') Публичная оферта
+                    a.legacy__lnk(href='#') Пользовательское соглашение
+                .legacy__list
+                    a.legacy__lnk(href='#') Согласие на обработку персональных данных
+                    a.legacy__lnk(href='#') Согласие на получение рекламных материалов
+            .footer__copy
+                p ИП Озеров Василий Игоревич ИНН: 772403968828 <br>ОГРНИП: 312774627201109
+                p Юридический адрес: 115409, <br> г. Москва, ул. Москворечье, 51-1-33
+

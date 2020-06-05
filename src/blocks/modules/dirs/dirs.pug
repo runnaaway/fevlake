@@ -1,9 +1,0 @@
-.dirs
-    .container
-        .dirs__title Направления работы
-        ul.dirs__list
-            each entry in [['DevOps', 'devops.svg'], ['Docker Swarm', 'docker.svg'], ['Yandex Cloud', 'yandex.svg'], ['Clickhouse', 'clickhouse.svg'], ['Education', 'education.svg'], ['Администрирование Linux', 'linux.svg'], ['Kubernetes', 'kuber.svg'], ['Google Cloud', 'google.svg'], ['Mysql', 'mysql.svg']]
-                .dirs__entry
-                    .entry__icon
-                        img(src='/img/svg/dirs/' + entry[1] alt='')
-                    p=entry[0]

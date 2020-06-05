@@ -1,0 +1,75 @@
+extends ../layouts/default
+include ../../blocks/modules/tags/tags
+block variables
+	- const title = "Clickhouse";
+block content
+	.service
+		.service__head
+			.container
+				.head__left
+					.service__title Clickhouse
+					.service__term *Работаем с 2012 года
+					ul
+						li Настроим и оптимизируем Clickhouse под ваши потребности
+						li Разберемся с данными и научим создавать производительные таблицы
+					button.btn.btn_lg.btn_green.js-modal-open(data-modal='modal-request') Оставить заявку на аудит
+				.head__techs
+					.techs__img
+						img(src='/img/svg/techs/clickhouse.svg' alt='')
+					.techs__dots
+						each entry in ['ansible', 'clickhouse', 'cloudcdn', 'computecloud', 'computeengine', 'docker', 'gitlab', 'go', 'haproxy', 'helm']
+							.dots__entry
+								img(src='/img/svg/techs/' + entry + '.svg' alt='')
+				+tags('green', ['Поддержка 24/7', 'Мониторим 24/7 ', 'SLA 5 min'])
+				+tags('green', ['Настраиваем CI/CD', 'Мониторим 24/7', 'Обучение'])
+		include ../../blocks/modules/clients/clients
+		.service__features
+			.container
+				.service__title Услуги
+				.features__text
+					p Наша цель - ваши запросы. Мы не просто настраиваем кластер и объединяем ноды. Благодаря нашему опыту в проектах, мы влезаем в ваши данные и понимаем, как их лучше хранить и обрабатывать.
+					p Мы создаем таблицы и оптимизируем запросы, а так же можем настроить прием сообщений в  различных гео локациях.
+				.features__list
+					each entry, index in [['Кластер', 'Настраиваем группы виртуальных машин с автоматическим масштабированием', 'scale'], ['Оптимизация', 'Настраиваем VPN для доступа к вашей приватной сети', 'security'], ['Аналитика', 'Настраиваем деплой ваших приложений через gitlab ci и yandex cli', 'cicd'], ['Golang', 'Напишем стриминг, который будет оптимально шардировать ваши данные', 'go'], ['Monitoring', 'Обеспечим снятие метрик с кластера кликхауса и разберем все возникающие инциденты', 'monitoring'], ['Backups', 'Настраиваем бекапы вашего clickhouse кластера с возможностью их последующего восстановления', 'backups']]
+						.features__entry
+							.entry__icon
+								img(src='/img/svg/features/' + entry[2] + '.svg' alt='')
+							.entry__title=entry[0]
+							p=entry[1]
+				.features__disclaimer Мы не замыкаем процессы на себе - все инструменты, которые мы используем будут доступны всей команде. <br>От руководства до администраторов. Все смогут следить за тем, что происходит в проекте.
+		.service__stack
+			.container
+				.stack__wrap
+					.service__title Технологический стек
+					.stack__list
+						each entry in [['Clickhouse', 'Используем колонучную базу от яндекса для хранения данных', 'clickhouse'], ['Mysql / Postgresql', 'Используем реляционные базы для хранения словарей и внешней информации', 'mysql'], ['Kafka', 'Используем как буфер для хранения и обработки событий', 'kafka'], ['Redash', 'Визуализируем аналитические данные в near real time режиме', 'redash'], ['Golang', 'Используем для написания инфраструктурных утилит и стриминга данных', 'golang'], ['Ansible', 'Настраиваем все инфраструктуру через код', 'ansible'], ['Prometheus', 'Мониторим состояние кластера и настраиваем алерты', 'prometheus'], ['Grafana', 'Визуализируем метрики с мониторинга для разбора инцидентов', 'grafana'], ['Internal Tools', 'Используем собственные наработки для анализа медленных запросов и некорректных настроек базы', 'internal']]
+							.stack__entry
+								.entry__icon
+									img(src='/img/svg/stack/' + entry[2] + '.svg' alt='')
+								.entry__title=entry[0]
+								.entry__text=entry[1]
+		include ../../blocks/modules/cases/cases
+		include ../../blocks/modules/reviews/reviews
+		.service__training
+			.container
+				.training__left
+					.training__subtitle Обучение с Fevlake
+					.training__title Мы создали одно из самых крупных сообществ специалистов по инфраструктуре в СНГ <br><br>И площадку
+						a(href='https://rebrainme.com') Rebrainme.com
+				.training__right
+					.training__form
+						.form__title Нужно развить команду / Нанять Системного администратора Linux
+						p Вопросы, которые можем решить:
+						ul
+							li Аудит компетенций вашего коллектива
+							li Требуется повысить квалификацию сотрудников
+							li Нужно нанять в штат инженера
+						a.btn.btn_md.btn_green(href='https://rebrainme.com/educorp/' target='_blank') Обучить сотрудников
+						button.btn.btn_md.btn_navy.js-modal-open(data-modal='modal-request') Запросить готовых Linux администраторов
+					.training__hint *Практикум проходят более 1000 человек
+	include ../../blocks/modules/blogs/blogs
+
+
+block scripts
+	script(src="js/clickhouse.js")
+	script(src="js/vendor.js")

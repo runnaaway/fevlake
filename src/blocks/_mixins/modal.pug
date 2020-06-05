@@ -1,0 +1,6 @@
+mixin modal(modalID)
+    .modal(id=modalID)
+        .modal-overlay.js-modal-close
+        .modal-container
+            a.modal__close.js-modal-close(href='#')
+            block

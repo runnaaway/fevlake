@@ -2,17 +2,22 @@
     .container
         .blogs__left
             .blogs__img
-                img(src='/img/svg/vc.svg' alt='')
-                img(src='/img/svg/habr.svg' alt='')
-                img(src='/img/svg/re.svg' alt='')
+                a.entry__lnk(href='https://vc.ru/u/480870-rebrain' target='_blank')
+                    img(src='/img/svg/vc.svg' alt='')
+                a.entry__lnk(href='#' target='_blank')
+                    img(src='/img/svg/habr.svg' alt='')
+                a.entry__lnk(href='rebrainme.com/blog' target='_blank')
+                    img(src='/img/svg/re.svg' alt='')
             .blogs__title Наши блоги и публикации
         .blogs__right
             .blogs__conf
                 .conf__entry
-                    .entry__img
-                        img(src='/img/devops.png' alt='')
-                    | DevOps Conf
+                    a.entry__lnk(href='#' target='_blank')
+                        .entry__img
+                            img(src='/img/devops.png' alt='')
+                        | DevOps Conf
                 .conf__entry
+                    a.entry__lnk(href='#' target='_blank')
                     .entry__img
                         img(src='/img/root.png' alt='')
                     | Root Conf

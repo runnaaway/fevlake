@@ -1,0 +1,9 @@
+.services
+    .container
+        .services__title Направления работы
+        ul.services__list
+            each entry in [['DevOps', 'devops.svg'], ['Docker Swarm', 'docker.svg'], ['Yandex Cloud', 'yandex.svg'], ['Clickhouse', 'clickhouse.svg'], ['Education', 'education.svg'], ['Администрирование Linux', 'linux.svg'], ['Kubernetes', 'kuber.svg'], ['Google Cloud', 'google.svg'], ['Mysql', 'mysql.svg']]
+                .services__entry
+                    .entry__icon
+                        img(src='/img/svg/services/' + entry[1] alt='')
+                    p=entry[0]

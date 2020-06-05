@@ -11,22 +11,45 @@
         height: 600px;
         background: #ecf1f6 url(../../../img/why_bg.png) right center no-repeat;
         pointer-events: none;
+
+        @media(max-width: 1000px) {
+            top: 0;
+            background-position: right top;
+        }
     }
 
     .container {
         display: flex;
         align-items: flex-start;
+
+        @media(max-width: 1000px) {
+            flex-direction: column;
+            align-items: stretch;
+        }
     }
 
     &__left {
         flex-shrink: 0;
         padding-top: 140px;
+
+        @media(max-width: 1000px) {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
     }
 
     &__right {
         display: flex;
         flex-grow: 1;
         margin-left: 40px;
+
+        @media(max-width: 1000px) {
+            margin: 0;
+        }
+
+        @media(max-width: 767px) {
+            flex-direction: column;
+        }
     }
 
     &__title {
@@ -36,11 +59,21 @@
         font-size: 42px;
         line-height: 51px;
         color: #1b2331;
+
+        @media(max-width: 767px) {
+            font-size: 32px;
+            line-height: 40px;
+        }
     }
 
     &__list {
         width: calc(50% - 30px);
-        margin: 0 15px;
+        margin: 0 -15px;
+
+        @media(max-width: 767px) {
+            width: 100%;
+            margin: 0 0 15px;
+        }
     }
 
     &__entry {
@@ -49,6 +82,10 @@
         background: #ffffff;
         box-shadow: 0 20px 40px rgba(2, 54, 97, 0.2);
         border-radius: 4px;
+
+        @media(max-width: 767px) {
+            margin: 0 0 15px;
+        }
 
         &:last-child {
             margin: 0;

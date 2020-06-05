@@ -1,6 +1,4 @@
 .reviews {
-    padding: 80px 0 50px;
-    background: linear-gradient(to bottom, #dfebf4, #fff);
 
     .btn-container {
         margin: 0;
@@ -13,7 +11,7 @@
     .slick-track {
         display: flex;
     }
-	
+    
     &__title {
         position: relative;
         margin: 0 0 50px;
@@ -23,6 +21,12 @@
         line-height: 51px;
         text-align: center;
         color: #1b2331;
+
+        @media(max-width: 767px) {
+            margin: 0 0 30px;
+            font-size: 32px;
+            line-height: 40px;
+        }
 
         &:before {
             content: "";
@@ -37,9 +41,26 @@
         }
     }
 
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        margin: -12px;
+
+        @media(max-width: 767px) {
+            margin: 0;
+        }
+
+        &.slick-slider {
+            margin: 0;
+        }
+    }
+
     &__entry {
+        box-sizing: border-box;
         display: flex !important;
         flex-direction: column;
+        width: calc(100% / 3 - 24px);
         height: auto !important;
         margin: 12px;
         padding: 30px 20px;
@@ -47,6 +68,15 @@
         background: #ffffff;
         box-shadow: 0 20px 40px rgba(2, 54, 97, 0.2);
         border-radius: 4px;
+
+        @media(max-width: 1060px) {
+            width: calc(50% - 24px);
+        }
+
+        @media(max-width: 767px) {
+            width: 100%;
+            margin: 0 0 20px;
+        }
 
         .entry__head {
             display: flex;
@@ -57,6 +87,7 @@
         .entry__logo {
             display: block;
             margin-left: auto;
+            max-width: 150px;
         }
 
         .entry__name {
@@ -76,16 +107,34 @@
         }
 
         .entry__text {
-            margin: 0 0 30px;
+            height: 140px;
+            overflow: hidden;
+            margin: 0 0 10px;
             font-size: 16px;
             line-height: 24px;
             color: #1b2331;
+
+            @media(max-width: 767px) {
+                height: auto;
+            }
+
+            &:after {
+                content: "...";
+            }
+
+            p {
+                display: none;
+
+                &:first-child {
+                    display: inline;
+                }
+            }
         }
 
         .entry__more {
-            margin-top: auto;
             display: flex;
             align-items: center;
+            margin-top: auto;
             font-weight: 600;
             font-size: 16px;
             line-height: 19px;
@@ -94,6 +143,31 @@
             &:hover {
                 color: $colorgreen_hover;
             }
+        }
+
+        &.opened {
+            .entry__text {
+                height: auto;
+
+                &:after {
+                    content: none;
+                }
+
+                p {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.mainpage {
+    .reviews {
+        padding: 80px 0 50px;
+        background: linear-gradient(to bottom, #dfebf4, #fff);
+
+        &__entry {
+            width: auto;
         }
     }
 }

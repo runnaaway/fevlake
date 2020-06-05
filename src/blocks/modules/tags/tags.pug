@@ -1,0 +1,4 @@
+mixin tags(className, items)
+    .tags(class='tags_' + className)
+        each entry in items
+            .tags__entry=entry

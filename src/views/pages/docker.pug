@@ -1,0 +1,75 @@
+extends ../layouts/default
+include ../../blocks/modules/tags/tags
+block variables
+	- const title = "Docker Swarm";
+block content
+	.service
+		.service__head
+			.container
+				.head__left
+					.service__title Docker Swarm
+					.service__term *Работаем с 2012 года
+					ul
+						li Разворачиваем docker swarm кластер
+						li Настраиваем деплой и мониторинг приложений в кластере
+					button.btn.btn_lg.btn_green.js-modal-open(data-modal='modal-request') Оставить заявку на аудит
+				.head__techs
+					.techs__img
+						img(src='/img/svg/techs/docker.svg' alt='')
+					.techs__dots
+						each entry in ['ansible', 'clickhouse', 'cloudcdn', 'computecloud', 'computeengine', 'docker', 'gitlab', 'go', 'haproxy', 'helm']
+							.dots__entry
+								img(src='/img/svg/techs/' + entry + '.svg' alt='')
+				+tags('green', ['Поддержка 24/7', 'Мониторим 24/7 ', 'SLA 5 min'])
+				+tags('green', ['Настраиваем CI/CD', 'Мониторим 24/7', 'Обучение'])
+		include ../../blocks/modules/clients/clients
+		.service__features
+			.container
+				.service__title Услуги
+				.features__text
+					p Вторая по популярности система оркестрации docker swarm.
+					p Поднимем High Availability кластер на ваших или облачных машинах, настроим мониторинг и CI/CD для ваших приложений. Работаем как с enterprise так и с community версиями.
+				.features__list
+					each entry, index in [['Кластер', 'Настраиваем облачные и bare metal кластера', 'cluster'], ['CI/CD', 'Настраиваем полный цикл CI/CD для вашего приложения', 'cicd'], ['Мониторинг', 'Собираем логи и метрики, а так же настраиваем нотификации о проблемах', 'monitoring'], ['Миграция', 'Докеризируем ваше приложение и описываем helm чарт для его деплоя', 'migration'], ['Security', 'Настраиваем RBAC для контроля доступа и Vault для хранения секретов', 'security']]
+						.features__entry
+							.entry__icon
+								img(src='/img/svg/features/' + entry[2] + '.svg' alt='')
+							.entry__title=entry[0]
+							p=entry[1]
+				.features__disclaimer Мы не замыкаем процессы на себе - все инструменты, которые мы используем будут доступны всей команде. <br>От руководства до администраторов. Все смогут следить за тем, что происходит в проекте.
+		.service__stack
+			.container
+				.stack__wrap
+					.service__title Технологический стек
+					.stack__list
+						each entry in [['Swarm', 'Вторая по популярности система оркестрации контейнеров', 'swarm'], ['Traefik', 'Настраиваем умный роутинг для вашего приложения', 'traefik'], ['Prometheus', 'Собираем метрики и визуализируем их с помощью grafana', 'prometheus'], ['Ansible', 'Настраиваем машины через configuration system management', 'ansible'], ['Terraform', 'Используем для создания виртуальных машин под кластер swarm', 'terraform'], ['EFK', 'Используем для сбора логов и их отображения', 'efk'], ['Portainer', 'Настраиваем web ui для управления кластером', 'portainer'], ['docker-compose', 'Описываем стек вашего приложения в compose файле', 'docker'], ['Internal Tools', 'Используем собственные наработки для анализа медленных запросов и некорректных настроек базы', 'internal']]
+							.stack__entry
+								.entry__icon
+									img(src='/img/svg/stack/' + entry[2] + '.svg' alt='')
+								.entry__title=entry[0]
+								.entry__text=entry[1]
+		include ../../blocks/modules/cases/cases
+		include ../../blocks/modules/reviews/reviews
+		.service__training
+			.container
+				.training__left
+					.training__subtitle Обучение с Fevlake
+					.training__title Мы создали одно из самых крупных сообществ специалистов по инфраструктуре в СНГ <br><br>И площадку
+						a(href='https://rebrainme.com') Rebrainme.com
+				.training__right
+					.training__form
+						.form__title Нужно развить команду / Нанять Системного администратора Linux
+						p Вопросы, которые можем решить:
+						ul
+							li Аудит компетенций вашего коллектива
+							li Требуется повысить квалификацию сотрудников
+							li Нужно нанять в штат инженера
+						a.btn.btn_md.btn_green(href='https://rebrainme.com/educorp/' target='_blank') Обучить сотрудников
+						button.btn.btn_md.btn_navy.js-modal-open(data-modal='modal-request') Запросить готовых Linux администраторов
+					.training__hint *Практикум проходят более 1000 человек
+	include ../../blocks/modules/blogs/blogs
+
+
+block scripts
+	script(src="js/docker.js")
+	script(src="js/vendor.js")

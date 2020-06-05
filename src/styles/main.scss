@@ -1,7 +1,30 @@
 @import "helpers/variables";
+@import "helpers/mixins";
 @import "vendor/libs";
 @import "base/general";
 @import "base/reset";
 @import "base/button";
+@import "base/checkbox";
+@import "base/input";
+@import "pages/about";
+@import "pages/service";
+@import "pages/case";
+@import "pages/contacts";
 @import "../blocks/components/components";
 @import "../blocks/modules/modules";
+
+.links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1000000;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+
+    a {
+        margin: 10px 0;
+    }
+}

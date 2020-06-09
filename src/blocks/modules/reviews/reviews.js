@@ -5,8 +5,8 @@ $(function () {
     $('.reviews__list').slick({
         slidesToShow: 5,
         autoplay: true,
-        autoplaySpeed: 0,
-        speed: 15000,
+        autoplaySpeed: 3000,
+        speed: 1000,
         arrows: false,
         cssEase: 'linear',
         slidesToScroll: 1,
@@ -30,12 +30,17 @@ $(function () {
                 breakpoint: 1080,
                 settings: {
                     slidesToShow: 2,
+                    autoplay: false,
+                    swipe: true
                 }
             },
             {
                 breakpoint: 767,
                 settings: {
                     slidesToShow: 1,
+                    autoplay: false,
+                    swipe: true,
+                    speed: 200
                 }
             }
         ]

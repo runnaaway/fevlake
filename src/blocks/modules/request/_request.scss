@@ -6,9 +6,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
         background: url(../../../img/request_left_top.png) left top no-repeat, url(../../../img/request_left_bottom.png) left bottom no-repeat, url(../../../img/request_right.png) right bottom no-repeat, linear-gradient(0deg, #deeaf4 0%, #ffffff 100%), #e3edf6;
     }
 
@@ -20,11 +17,17 @@
         background-size: contain;
     }
 
+    .modal__title {
+        text-align: center;
+    }
+
     .modal__form {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
         width: 100%;
-        max-width: 470px;
+        max-width: 500px;
         margin: 0 -10px;
     }
 

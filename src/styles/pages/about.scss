@@ -3,6 +3,10 @@
         padding: 120px 0 100px;
         background: url(../../img/about_bg.png) center top no-repeat, linear-gradient(180deg, #dfebf4 0%, rgba(236, 241, 246, 0) 100%);
 
+        @media(max-width: 1300px) {
+            padding: 80px 0;
+        }
+
         @media(max-width: 400px) {
             padding: 60px 0;
         }
@@ -18,13 +22,19 @@
             line-height: 32px;
             color: #1b2331;
 
+            @media(max-width: 1300px) {
+                margin: 0 0 50px;
+                font-size: 16px;
+                line-height: 24px;
+            }
+
             @media(max-width: 1000px) {
                 max-width: none;
                 margin: 0 0 50px;
             }
 
             @media(max-width: 767px) {
-                font-size: 16px;
+                font-size: 14px;
                 line-height: 24px;
             }
         }
@@ -70,8 +80,14 @@
                 line-height: 24px;
                 color: #1b2331;
 
+                @media(max-width: 1300px) {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+
                 @media(max-width: 400px) {
                     font-size: 16px;
+                    line-height: 22px;
                 }
             }
 
@@ -94,8 +110,13 @@
         line-height: 32px;
         color: #1b2331;
 
-        @media(max-width: 767px) {
+        @media(max-width: 1300px) {
             padding: 60px 0;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        @media(max-width: 767px) {
             font-size: 16px;
             line-height: 24px;
         }
@@ -118,10 +139,15 @@
     }
 
     &__why {
+        overflow: hidden;
         padding: 120px 0;
 
-        @media(max-width: 960px) {
+        @media(max-width: 1300px) {
             padding: 60px 0;
+        }
+
+        @media(max-width: 400px) {
+            padding: 40px 0;
         }
 
         .why__title {
@@ -131,16 +157,27 @@
             line-height: 51px;
             text-align: center;
 
+            @media(max-width: 1300px) {
+                font-size: 36px;
+                line-height: 42px;
+            }
+
             @media(max-width: 767px) {
                 margin: 0 0 30px;
                 font-size: 30px;
                 line-height: 38px;
+            }
+
+            @media(max-width: 400px) {
+                font-size: 24px;
+                line-height: 32px;
             }
         }
 
         .why__list {
             display: flex;
             width: calc(100% + 24px);
+            margin: 0 -12px;
 
             @media(max-width: 850px) {
                 flex-direction: column;
@@ -167,8 +204,8 @@
     &__rebrain {
         padding: 50px 0 140px;
 
-        @media(max-width: 767px) {
-            padding: 50px 0;
+        @media(max-width: 1300px) {
+            padding: 50px 0 80px;
         }
 
         @media(max-width: 400px) {
@@ -189,6 +226,11 @@
             font-size: 20px;
             line-height: 32px;
 
+            @media(max-width: 1300px) {
+                font-size: 16px;
+                line-height: 24px;
+            }
+
             @media(max-width: 767px) {
                 font-size: 16px;
                 line-height: 24px;
@@ -201,10 +243,21 @@
             font-size: 42px;
             line-height: 51px;
 
+            @media(max-width: 1300px) {
+                margin: 0 0 30px;
+                font-size: 36px;
+                line-height: 42px;
+            }
+
             @media(max-width: 767px) {
                 margin: 0 0 30px;
                 font-size: 30px;
                 line-height: 38px;
+            }
+
+            @media(max-width: 400px) {
+                font-size: 26px;
+                line-height: 36px;
             }
         }
 
@@ -214,6 +267,7 @@
             padding: 40px 75px;
             background: linear-gradient(90deg, #15151e 0%, #2e2e3d 100%);
             border-radius: 10px;
+            transition: all 200ms linear;
 
             @media(max-width: 960px) {
                 margin: 0 0 120px;
@@ -224,8 +278,15 @@
             }
 
             @media(max-width: 400px) {
+                box-sizing: border-box;
+                width: 100%;
                 margin: 0 0 100px;
                 padding: 20px 30px;
+            }
+
+            img {
+                display: block;
+                width: 100%;
             }
 
             &:before {
@@ -241,10 +302,18 @@
                 margin: auto;
                 border-radius: 50%;
                 background: rgba(103, 146, 179, 0.08);
+                transition: all 200ms linear;
 
                 @media(max-width: 400px) {
                     width: 200px;
                     height: 200px;
+                }
+            }
+            
+            &:hover {
+                &:before {
+                    transform: scale(1.1, 1.1);
+                    background: rgba(103, 146, 179, 0.2);
                 }
             }
         }

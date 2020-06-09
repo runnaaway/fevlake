@@ -8,8 +8,6 @@
     border-bottom: 1px solid #e3e6e9;
 
     @media(max-width: 900px) {
-        border: none;
-
         &.opened {
             .header__wrap {
                 display: flex;
@@ -128,7 +126,6 @@
         }
 
         .menu__lnk {
-            font-size: 16px;
 
             @media(max-width: 900px) {
                 display: block;

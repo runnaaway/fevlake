@@ -21,14 +21,13 @@ block content
 							.dots__entry
 								img(src='/img/svg/techs/' + entry + '.svg' alt='')
 				+tags('green', ['Поддержка 24/7', 'Мониторим 24/7 ', 'SLA 5 min'])
-				+tags('green', ['Поддержка 24/7', 'Мониторим 24/7', 'Обучение'])
 		include ../../blocks/modules/clients/clients
 		.service__features
 			.container
 				.service__title Услуги
 				.features__text
 					p Мы разрабатываем уникальные решения для хранения и использования данных конкретно под вас и ваши задачи.
-					p Оптимизируем запросы, создаем индексы, настраиваем автоматическое переключение, а так же балансировку запросов между различными инстансами mysql.
+					p Оптимизируем запросы, создаем индексы, настраиваем автоматическое переключение, а также балансировку запросов между различными инстансами mysql.
 				.features__list
 					each entry, index in [['High Availability', 'Настроим master-master с автоматическим переключением', 'avail'], ['Оптимизация', 'Настраиваем VPN для доступа к вашей приватной сети', 'security'], ['Backups', 'Настроим автоматическое резервирование баз по расписанию', 'backups'], ['Performance', 'Настроим кластер слейвов и закинем на них все запросы на чтение', 'performance'], ['Monitoring', 'Обеспечим снятие метрик с кластера кликхауса и разберем все возникающие инциденты', 'monitoring']]
 						.features__entry
@@ -36,13 +35,13 @@ block content
 								img(src='/img/svg/features/' + entry[2] + '.svg' alt='')
 							.entry__title=entry[0]
 							p=entry[1]
-				.features__disclaimer Мы не замыкаем процессы на себе - все инструменты, которые мы используем будут доступны всей команде. <br>От руководства до администраторов. Все смогут следить за тем, что происходит в проекте.
+				.features__disclaimer Мы не замыкаем процессы на себе - все инструменты, которые мы используем, будут доступны всей команде. <br>От руководства до администраторов. Все смогут следить за тем, что происходит в проекте.
 		.service__stack
 			.container
 				.stack__wrap
 					.service__title Технологический стек
 					.stack__list
-						each entry in [['Mysql', 'Используем percona mysql для хранения данных', 'mysql'], ['SQL Proxy', 'Используем proxy для роутинга запросов на различных хосты', 'sql'], ['Haproxy', 'Используем для автоматического переключения приложений', 'haproxy'], ['XtraBackup', 'Используем для создания бекапа данных', 'xtrabackup'], ['Keepalived', 'Настраиваем для автоматического переключения на резервный хост в случае проблем', 'keepalived'], ['Ansible', 'Настраиваем все инфраструктуру через код', 'ansible'], ['Percona tools', 'Анализируем медленные запросы', 'percona'], ['gh-ost', 'Меняем схему таблиц в онлайн режиме без простоя', 'ghost'], ['Internal Tools', 'Внутренние инструменты, например, для переливки инстансов mysql в realtime режиме', 'internal']]
+						each entry in [['Mysql', 'Используем percona mysql для хранения данных', 'mysql'], ['SQL Proxy', 'Используем proxy для роутинга запросов на различные хосты', 'sql'], ['Haproxy', 'Используем для автоматического переключения приложений', 'haproxy'], ['XtraBackup', 'Используем для создания бекапа данных', 'xtrabackup'], ['Keepalived', 'Настраиваем для автоматического переключения на резервный хост в случае проблем', 'keepalived'], ['Ansible', 'Настраиваем все инфраструктуру через код', 'ansible'], ['Percona tools', 'Анализируем медленные запросы', 'percona'], ['gh-ost', 'Меняем схему таблиц в онлайн режиме без простоя', 'ghost'], ['Internal Tools', 'Внутренние инструменты, например, для переливки инстансов mysql в realtime режиме', 'internal']]
 							.stack__entry
 								.entry__icon
 									img(src='/img/svg/stack/' + entry[2] + '.svg' alt='')
@@ -65,7 +64,7 @@ block content
 							li Требуется повысить квалификацию сотрудников
 							li Нужно нанять в штат инженера
 						a.btn.btn_md.btn_green(href='https://rebrainme.com/educorp/' target='_blank') Обучить сотрудников
-						button.btn.btn_md.btn_navy.js-modal-open(data-modal='modal-request') Запросить готовых Linux администраторов
+						button.btn.btn_md.btn_navy.js-modal-open(data-modal='modal-request') Запросить готовых MySQL администраторов
 					.training__hint *Практикум проходят более 1000 человек
 	include ../../blocks/modules/blogs/blogs
 

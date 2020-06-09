@@ -19,7 +19,7 @@ $(function () {
         contactsPlacemark = new ymaps.Placemark([55.773155, 37.597208], {
             hintContent: 'Москва, Тверской-Ямской 1-й пер., д. 11, оф. 2'
         }, {
-            iconImageHref: '/img/svg/pin.svg',
+            iconImageHref: 'img/svg/pin.svg',
             iconLayout: 'default#image',
             iconImageSize: [226, 54],
             iconImageOffset: [-20, -54]

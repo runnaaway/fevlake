@@ -5,17 +5,18 @@ include ../../_mixins/modal
         .modal__title Заявка на бесплатный аудит
         .modal__subtitle *каждый месяц мы выделяем 2 слота под бесплатные аудиты
         label.form__label.form__label_lg
-            input.form__input(type='text' name='company'  placeholder='Название компании')
+            input.form__input(type='text' name='company' required placeholder='Название компании')
             span.form__caption Название компании
         label.form__label.form__label_md
-            input.form__input(type='text' name='name'  placeholder='Имя')
+            input.form__input(type='text' name='name' required placeholder='Имя')
             span.form__caption Имя
         label.form__label.form__label_md
-            input.form__input.form__input_phone(type='tel' name='phone'  placeholder='Телефон')
+            input.form__input.form__input_phone(type='tel' name='phone'  requiredplaceholder='Телефон')
             span.form__caption Телефон
         label.form__label.form__label_lg
-            input.form__input(type='email' name='company'  placeholder='Email')
+            input.form__input(type='email' name='company' required placeholder='Email')
             span.form__caption Email
+        .form__label.form__label_lg.form__error
         .form__label.form__label_lg
             button.btn.btn_md.btn_green(type='submit') Оставить заявку
         .form__label.form__label_lg

@@ -2,8 +2,9 @@
     .container
         .services__title Направления работы
         ul.services__list
-            each entry in [['DevOps', 'devops.svg'], ['Docker Swarm', 'docker.svg'], ['Yandex Cloud', 'yandex.svg'], ['Clickhouse', 'clickhouse.svg'], ['Education', 'education.svg'], ['Администрирование Linux', 'linux.svg'], ['Kubernetes', 'kuber.svg'], ['Google Cloud', 'google.svg'], ['Mysql', 'mysql.svg']]
+            each entry in [['DevOps', 'devops.svg', 'devops.html', '_self'], ['Docker Swarm', 'docker.svg', 'docker.html', '_self'],  ['Yandex Cloud', 'yandex.svg', 'yandex.html', '_self'], ['Clickhouse', 'clickhouse.svg', 'clickhouse.html', '_self'], ['Education', 'education.svg', 'https://rebrainme.com', '_blank'], ['Администрирование Linux', 'linux.svg', 'linux.html', '_self'], ['Kubernetes', 'kuber.svg', 'kubernetes.html', '_self'], ['Google Cloud', 'google.svg', 'google.html', '_self'], ['Mysql', 'mysql.svg', 'mysql.html', '_self']]
                 .services__entry
+                    a.entry__lnk(href=entry[2] target=entry[3])
                     .entry__icon
                         img(src='/img/svg/services/' + entry[1] alt='')
                     p=entry[0]

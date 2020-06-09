@@ -72,17 +72,29 @@
             margin-right: 0;
         }
     }
+
+    &.error {
+        .form__input {
+            border-color: #ff0000;
+        }
+    }
 }
 
 .form__caption {
     position: absolute;
     top: 50%;
     left: 20px;
-    transform: translate(0, -50%);
-    font-size: 16px;
-    line-height: 19px;
+    transform: translate(0, -150%);
+    font-size: 12px;
+    line-height: 15px;
     color: #7c8ca4;
     transition: all 200ms linear;
+}
+
+.form__error {
+    display: none;
+    font-size: 14px;
+    color: #ff0000;
 }
 
 .form__input {

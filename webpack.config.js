@@ -15,6 +15,7 @@ module.exports = {
     
     entry: {
         main: ["./src/js/index.js", "./src/js/common.js"],
+        about: ["./src/js/common.js"],
         case: ["./src/js/common.js"],
         cases: ["./src/js/common.js"],
         clickhouse: ["./src/js/import/pages/service.js", "./src/js/common.js"],

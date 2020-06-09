@@ -7,12 +7,12 @@ block content
 		.service__head
 			.container
 				.head__left
-					.service__title Внедрение DevOps практик
+					.service__title Внедрение DevOps-практик
 					.service__term *Работаем с 2012 года
 					ul
 						li Дадим разработчикам возможность писать код
 						li Автоматизируем сборку, тестирование, выкладку
-						li Настроим мониторинг, сбор логов, а так же опишем всю инфраструктуру
+						li Настроим мониторинг, сбор логов, а также опишем всю инфраструктуру
 					button.btn.btn_lg.btn_green.js-modal-open(data-modal='modal-request') Оставить заявку на аудит
 				.head__techs
 					.techs__img
@@ -22,21 +22,20 @@ block content
 							.dots__entry
 								img(src='/img/svg/techs/' + entry + '.svg' alt='')
 				+tags('green', ['Поддержка 24/7', 'Мониторим 24/7 ', 'SLA 5 min'])
-				+tags('green', ['Настраиваем CI/CD', 'Мониторим 24/7', 'SLA'])
 		include ../../blocks/modules/clients/clients
 		.service__features
 			.container
 				.service__title Услуги
 				.features__text
-					p Основной нашей целью - является решение ваших задач. Именно поэтому мы не зацикливаемся на каком-то определенном наборе утилит, а подбираем те инструменты, которые подходят именно вам и которые эффективно решают вашу задачу.
+					p Основной нашей целью является решение ваших задач. Именно поэтому мы не зацикливаемся на каком-то определенном наборе утилит, а подбираем те инструменты, которые подходят именно вам и которые эффективно решают вашу задачу.
 				.features__list
-					each entry, index in [['Infrastructure As A Code', 'Описываем вашу инфрастрктуру', 'infrastructure'], ['CI/CD', 'Внедрение Integration / Continous Delivery практик для постоянной сборки, тестирования и выкладки приложений.', 'cicd'], ['Monitoring 24/7', 'Мониторинг состояния инфраструктуры и приложения, а так же сбор логов для последующего анализа', 'monitoring'], ['Consulting', 'Консультируем по внедрению DevOps практик и инструментам', 'consulting'], ['Education', 'Обучим для вас DevOps инженеров, или проведем обучение существующей команды', 'education']]
+					each entry, index in [['Infrastructure as a Code', 'Описываем вашу инфраструктуру', 'infrastructure'], ['CI/CD', 'Внедрение Integration / Continous Delivery практик для постоянной сборки, тестирования и выкладки приложений', 'cicd'], ['Monitoring 24/7', 'Мониторинг состояния инфраструктуры и приложения, а также сбор логов для последующего анализа', 'monitoring'], ['Consulting', 'Консультируем по внедрению DevOps-практик и инструментам', 'consulting'], ['Education', 'Обучим для вас DevOps-инженеров или проведем обучение существующей команды', 'education']]
 						.features__entry
 							.entry__icon
 								img(src='/img/svg/features/' + entry[2] + '.svg' alt='')
 							.entry__title=entry[0]
 							p=entry[1]
-				.features__disclaimer Мы не замыкаем процессы на себе - все инструменты, которые мы используем будут доступны всей команде. <br>От руководства до администраторов. Все смогут следить за тем, что происходит в проекте.
+				.features__disclaimer Мы не замыкаем процессы на себе - все инструменты, которые мы используем, будут доступны всей команде. <br>От руководства до администраторов. Все смогут следить за тем, что происходит в проекте.
 		.service__stack
 			.container
 				.stack__wrap
@@ -51,7 +50,7 @@ block content
 				.stack__wrap
 					.service__title Стек разработки
 					.stack__list
-						each entry in [['PHP', 'YII / Laravel / Symfony и любые приложения на php', 'php'], ['Golang', 'Обожаем golang и не устаем с ним работать', 'golang'], ['Python', 'Деплоим и django и сервисы на python', 'python'], ['Ruby', 'Работаем с Ruby On Rails, а так же можем деплоить через capistrano', 'ruby'], ['Java', 'Знаем для чего нужны параметры -Xmx и -Xms', 'java'], ['NodeJS', 'Собираем фронт и бек  на ноде', 'nodejs'], ['C++', 'Не боимся браться за сложные задачи', 'c']]
+						each entry in [['PHP', 'YII / Laravel / Symfony и любые приложения на php', 'php'], ['Golang', 'Обожаем golang и не устаем с ним работать', 'golang'], ['Python', 'Деплоим и django, и сервисы на python', 'python'], ['Ruby', 'Работаем с Ruby On Rails, а также можем деплоить через capistrano', 'ruby'], ['Java', 'Знаем, для чего нужны параметры -Xmx и -Xms', 'java'], ['NodeJS', 'Собираем фронт и бек  на ноде', 'nodejs'], ['C++', 'Не боимся браться за сложные задачи', 'c']]
 							.stack__entry
 								.entry__icon
 									img(src='/img/svg/stack/' + entry[2] + '.svg' alt='')
@@ -67,14 +66,14 @@ block content
 						a(href='https://rebrainme.com') Rebrainme.com
 				.training__right
 					.training__form
-						.form__title Нужно развить команду / Нанять Системного администратора Linux
+						.form__title Нужно развить команду / Нанять DevOps-инженера
 						p Вопросы, которые можем решить:
 						ul
 							li Аудит компетенций вашего коллектива
 							li Требуется повысить квалификацию сотрудников
 							li Нужно нанять в штат инженера
 						a.btn.btn_md.btn_green(href='https://rebrainme.com/educorp/' target='_blank') Обучить сотрудников
-						button.btn.btn_md.btn_navy Запросить готовых Linux администраторов
+						button.btn.btn_md.btn_navy Запросить готовых DevOps-инженеров
 					.training__hint *Практикум проходят более 1000 человек
 	include ../../blocks/modules/blogs/blogs
 

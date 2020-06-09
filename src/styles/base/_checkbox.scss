@@ -29,6 +29,11 @@
         line-height: 24px;
         color: #1b2331;
 
+        @media(max-width: 1300px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
         &:before {
             content: "";
             box-sizing: border-box;

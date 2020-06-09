@@ -11,6 +11,4 @@ export default function setReviewContent(item) {
     $('#modal-review').find('.review__text').html(text);
     $('#modal-review').find('.review__name').text(name);
     $('#modal-review').find('.review__position').text(position);
-
-    $('#modal-review').addClass('opened');
 }

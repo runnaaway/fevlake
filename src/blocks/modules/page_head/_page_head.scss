@@ -9,6 +9,10 @@
         line-height: 51px;
         color: #1b2331;
 
+        @media(max-width: 1300px) {
+            font-size: 36px;
+        }
+
         @media(max-width: 767px) {
             font-size: 32px;
             line-height: 40px;

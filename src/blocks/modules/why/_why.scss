@@ -36,6 +36,10 @@
             padding: 60px 0 40px;
             text-align: center;
         }
+
+        @media(max-width: 400px) {
+            padding: 40px 0;
+        }
     }
 
     &__right {
@@ -64,11 +68,16 @@
             font-size: 32px;
             line-height: 40px;
         }
+
+        @media(max-width: 400px) {
+            font-size: 26px;
+            line-height: 36px;
+        }
     }
 
     &__list {
         width: calc(50% - 30px);
-        margin: 0 -15px;
+        margin: 0 15px;
 
         @media(max-width: 767px) {
             width: 100%;
@@ -113,5 +122,11 @@
                 display: block;
             }
         }
+    }
+}
+
+.mainpage {
+    .why {
+        padding-bottom: 20px;
     }
 }

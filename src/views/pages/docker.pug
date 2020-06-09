@@ -21,22 +21,21 @@ block content
 							.dots__entry
 								img(src='/img/svg/techs/' + entry + '.svg' alt='')
 				+tags('green', ['Поддержка 24/7', 'Мониторим 24/7 ', 'SLA 5 min'])
-				+tags('green', ['Настраиваем CI/CD', 'Мониторим 24/7', 'Обучение'])
 		include ../../blocks/modules/clients/clients
 		.service__features
 			.container
 				.service__title Услуги
 				.features__text
 					p Вторая по популярности система оркестрации docker swarm.
-					p Поднимем High Availability кластер на ваших или облачных машинах, настроим мониторинг и CI/CD для ваших приложений. Работаем как с enterprise так и с community версиями.
+					p Поднимем High Availability кластер на ваших или облачных машинах, настроим мониторинг и CI/CD для ваших приложений. Работаем как с enterprise, так и с community версиями.
 				.features__list
-					each entry, index in [['Кластер', 'Настраиваем облачные и bare metal кластера', 'cluster'], ['CI/CD', 'Настраиваем полный цикл CI/CD для вашего приложения', 'cicd'], ['Мониторинг', 'Собираем логи и метрики, а так же настраиваем нотификации о проблемах', 'monitoring'], ['Миграция', 'Докеризируем ваше приложение и описываем helm чарт для его деплоя', 'migration'], ['Security', 'Настраиваем RBAC для контроля доступа и Vault для хранения секретов', 'security']]
+					each entry, index in [['Кластер', 'Настраиваем облачные и bare metal кластера', 'cluster'], ['CI/CD', 'Настраиваем полный цикл CI/CD для вашего приложения', 'cicd'], ['Мониторинг', 'Собираем логи и метрики, а также настраиваем нотификации о проблемах', 'monitoring'], ['Миграция', 'Докеризируем ваше приложение и описываем helm чарт для его деплоя', 'migration'], ['Security', 'Настраиваем RBAC для контроля доступа и Vault для хранения секретов', 'security']]
 						.features__entry
 							.entry__icon
 								img(src='/img/svg/features/' + entry[2] + '.svg' alt='')
 							.entry__title=entry[0]
 							p=entry[1]
-				.features__disclaimer Мы не замыкаем процессы на себе - все инструменты, которые мы используем будут доступны всей команде. <br>От руководства до администраторов. Все смогут следить за тем, что происходит в проекте.
+				.features__disclaimer Мы не замыкаем процессы на себе - все инструменты, которые мы используем, будут доступны всей команде. <br>От руководства до администраторов. Все смогут следить за тем, что происходит в проекте.
 		.service__stack
 			.container
 				.stack__wrap
@@ -55,7 +54,7 @@ block content
 				.training__left
 					.training__subtitle Обучение с Fevlake
 					.training__title Мы создали одно из самых крупных сообществ специалистов по инфраструктуре в СНГ <br><br>И площадку
-						a(href='https://rebrainme.com') Rebrainme.com
+						a(href='https://rebrainme.com' target='_blank') Rebrainme.com
 				.training__right
 					.training__form
 						.form__title Нужно развить команду / Нанять Системного администратора Linux
@@ -65,7 +64,7 @@ block content
 							li Требуется повысить квалификацию сотрудников
 							li Нужно нанять в штат инженера
 						a.btn.btn_md.btn_green(href='https://rebrainme.com/educorp/' target='_blank') Обучить сотрудников
-						button.btn.btn_md.btn_navy.js-modal-open(data-modal='modal-request') Запросить готовых Linux администраторов
+						button.btn.btn_md.btn_navy.js-modal-open(data-modal='modal-request') Запросить готовых Docker администраторов
 					.training__hint *Практикум проходят более 1000 человек
 	include ../../blocks/modules/blogs/blogs
 

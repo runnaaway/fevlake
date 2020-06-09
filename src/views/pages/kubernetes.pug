@@ -21,28 +21,27 @@ block content
 							.dots__entry
 								img(src='/img/svg/techs/' + entry + '.svg' alt='')
 				+tags('green', ['Поддержка 24/7', 'Мониторим 24/7 ', 'SLA 5 min'])
-				+tags('green', ['Настраиваем CI/CD', 'Мониторим 24/7', 'Обучение'])
 		include ../../blocks/modules/clients/clients
 		.service__features
 			.container
 				.service__title Услуги
 				.features__text
 					p Мы выполнили большое количество проектов с использованием Kubernetes.
-					p Наши сотрудники получили сертификацию CKA и готовы поддерживать и обслуживать ваш kubernetes кластер. Так же мы можем помочь в миграции вашего приложения в Kubernetes.
+					p Наши сотрудники получили сертификацию CKA и готовы поддерживать и обслуживать ваш kubernetes кластер. Также мы можем помочь в миграции вашего приложения в Kubernetes.
 				.features__list
-					each entry, index in [['Кластер', 'Настраиваем облачные и bare metal кластера', 'cluster'], ['CI/CD', 'Настраиваем полный цикл CI/CD для вашего приложения', 'cicd'], ['Monitoring', 'Собираем логи и метрики, а так же настраиваем нотификации о проблемах', 'monitoring'], ['Миграция', 'Докеризируем ваше приложение и описываем helm чарт для его деплоя', 'migration'], ['Security', 'Настраиваем RBAC для контроля доступа и Vault для хранения секретов', 'security']]
+					each entry, index in [['Кластер', 'Настраиваем облачные и bare metal кластера', 'cluster'], ['CI/CD', 'Настраиваем полный цикл CI/CD для вашего приложения', 'cicd'], ['Monitoring', 'Собираем логи и метрики, а также настраиваем нотификации о проблемах', 'monitoring'], ['Миграция', 'Докеризируем ваше приложение и описываем helm чарт для его деплоя', 'migration'], ['Security', 'Настраиваем RBAC для контроля доступа и Vault для хранения секретов', 'security']]
 						.features__entry
 							.entry__icon
 								img(src='/img/svg/features/' + entry[2] + '.svg' alt='')
 							.entry__title=entry[0]
 							p=entry[1]
-				.features__disclaimer Мы не замыкаем процессы на себе - все инструменты, которые мы используем будут доступны всей команде. <br>От руководства до администраторов. Все смогут следить за тем, что происходит в проекте.
+				.features__disclaimer Мы не замыкаем процессы на себе - все инструменты, которые мы используем, будут доступны всей команде. <br>От руководства до администраторов. Все смогут следить за тем, что происходит в проекте.
 		.service__stack
 			.container
 				.stack__wrap
 					.service__title Технологический стек
 					.stack__list
-						each entry in [['Kubernetes', 'Используем percona mysql для хранения данных', 'kubernetes'], ['Helm', 'Используем proxy для роутинга запросов на различных хосты', 'helm'], ['Terraform', 'Используем для автоматического переключения приложений', 'terraform'], ['Prometheus operator', 'Используем для создания бекапа данных', 'prometheus'], ['Certmanager', 'Настраиваем для автоматического переключения на резервный хост в случае проблем', 'certmanager'], ['GitlabCI', 'Настраиваем все инфраструктуру через код', 'gitlab'], ['EFK', 'Анализируем медленные запросы', 'efk'], ['DNS', 'Меняем схему таблиц в онлайн режиме без простоя', 'dns'], ['Internal Tools', 'Используем собственные наработки для анализа медленных запросов и некорректных настроек базы', 'internal']]
+						each entry in [['Kubernetes', 'Используем percona mysql для хранения данных', 'kubernetes'], ['Helm', 'Используем proxy для роутинга запросов на различные хосты', 'helm'], ['Terraform', 'Используем для автоматического переключения приложений', 'terraform'], ['Prometheus operator', 'Используем для создания бекапа данных', 'prometheus'], ['Certmanager', 'Настраиваем для автоматического переключения на резервный хост в случае проблем', 'certmanager'], ['GitlabCI', 'Настраиваем всю инфраструктуру через код', 'gitlab'], ['EFK', 'Анализируем медленные запросы', 'efk'], ['DNS', 'Меняем схему таблиц в онлайн режиме без простоя', 'dns'], ['Internal Tools', 'Используем собственные наработки для анализа медленных запросов и некорректных настроек базы', 'internal']]
 							.stack__entry
 								.entry__icon
 									img(src='/img/svg/stack/' + entry[2] + '.svg' alt='')
@@ -65,7 +64,7 @@ block content
 							li Требуется повысить квалификацию сотрудников
 							li Нужно нанять в штат инженера
 						a.btn.btn_md.btn_green(href='https://rebrainme.com/educorp/' target='_blank') Обучить сотрудников
-						button.btn.btn_md.btn_navy.js-modal-open(data-modal='modal-request') Запросить готовых Linux администраторов
+						button.btn.btn_md.btn_navy.js-modal-open(data-modal='modal-request') Запросить готовых Kubernetes администраторов
 					.training__hint *Практикум проходят более 1000 человек
 	include ../../blocks/modules/blogs/blogs
 

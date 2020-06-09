@@ -5,6 +5,6 @@ mixin reviewsEntry(name, position, logo, text, isModal, modalType)
                 .entry__name=name
                 .entry__position=position
             - if (logo)
-                img.entry__logo(src='/img/reviews/' + logo + '.png' alt='')
+                img.entry__logo(src='/img/clients/' + logo + '.png' alt='')
         .entry__text!=text
         a.entry__more(class=(isModal ? isModal : false) href='#' data-modal=(modalType ? modalType : false)) Читать полностью

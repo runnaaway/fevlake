@@ -1,8 +1,16 @@
 .banner {
-    background: url(../../../img/banner_bg.jpg) center no-repeat;
+    background: linear-gradient(90deg, #16002a 0%, rgba(14, 14, 14, 0) 71.11%, rgba(0, 0, 0, 0) 100%), url(../../../img/banner_bg.jpg) center no-repeat;
+    background-color: #160228;
     background-size: cover;
     background-attachment: fixed;
     color: #ffffff;
+
+    @media(max-width: 767px) {
+        background: linear-gradient(90deg, #16002a 0%, rgba(0, 0, 0, .1) 100%), url(../../../img/banner_bg_mob.jpg) center no-repeat;
+        background-color: #160228;
+        background-size: cover;
+        background-attachment: scroll;
+    }
 
     .container {
         display: flex;
@@ -41,12 +49,16 @@
         font-size: 32px;
         line-height: 48px;
         text-transform: uppercase;
-        font-weight: 700;
+        font-weight: 500;
 
         @media(max-width: 850px) {
             font-size: 24px;
             line-height: 32px;
             font-weight: 600;
+        }
+
+        @media(max-width: 400px) {
+            font-size: 22px;
         }
     }
 }
